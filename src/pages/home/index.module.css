@@ -1,0 +1,19 @@
+.title {
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+    color: rgb(87, 30, 219);
+}
+
+.homePicture {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.text {
+    margin: 0 auto;
+    width: 60%;
+    font-size: 14px;
+    text-align: center;
+}

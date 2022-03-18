@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    color: rgba(87, 30, 219, 0.5);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.text {
+    color: rgb(0, 0, 0, 0.5);
+    margin-right: 70px;
+    font-weight: bold;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(87, 30, 219, 0.2);
+}
