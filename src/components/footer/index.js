@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './index.module.css';
-import { DeleteIcon } from '../icons';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {

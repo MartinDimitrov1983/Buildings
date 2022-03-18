@@ -5,29 +5,29 @@ exports[`Snapshot Table 1`] = `
   <div
     class="container"
   >
-    <table>
+    <table
+      class="table"
+    >
       <thead>
         <tr>
           <th>
-            name
+            Id
           </th>
           <th>
-            plan
+            Name
           </th>
           <th>
-            units
+            Area
           </th>
           <th>
-            city
+            Location
           </th>
           <th>
-            region
+            Image
           </th>
           <th>
-            manager
+            Action
           </th>
-          <th />
-          <th />
         </tr>
       </thead>
       <tbody />

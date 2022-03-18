@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Footer 1`] = `
+<DocumentFragment>
+  <footer
+    class="footer"
+  >
+    <div
+      class="container"
+    >
+      <div>
+        <a
+          class="link"
+          href="/"
+        >
+          HomePage
+        </a>
+        <a
+          class="link"
+          href="/details"
+        >
+          Details
+        </a>
+      </div>
+      <p
+        class="text"
+      >
+        The Building App
+      </p>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

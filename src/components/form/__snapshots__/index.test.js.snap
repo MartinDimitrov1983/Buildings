@@ -7,9 +7,7 @@ exports[`Snapshot Form 1`] = `
   >
     <p
       class="title"
-    >
-      Edit properties
-    </p>
+    />
     <div
       class="container"
     >
@@ -34,34 +32,15 @@ exports[`Snapshot Form 1`] = `
     >
       <label
         class="label"
-        for="plan"
+        for="area"
       >
-        Plan Number:
+        Area:
       </label>
       <input
         class="formControl"
-        id="plan"
-        name="plan"
-        placeholder="Plan Number"
-        required=""
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      class="container"
-    >
-      <label
-        class="label"
-        for="units"
-      >
-        Units:
-      </label>
-      <input
-        class="formControl"
-        id="units"
-        name="units"
-        placeholder="Units"
+        id="area"
+        name="area"
+        placeholder="Area"
         required=""
         type="number"
         value=""
@@ -72,15 +51,15 @@ exports[`Snapshot Form 1`] = `
     >
       <label
         class="label"
-        for="city"
+        for="location"
       >
-        City:
+        Location:
       </label>
       <input
         class="formControl"
-        id="city"
-        name="city"
-        placeholder="City"
+        id="location"
+        name="location"
+        placeholder="Location"
         required=""
         type="text"
         value=""
@@ -91,148 +70,15 @@ exports[`Snapshot Form 1`] = `
     >
       <label
         class="label"
-        for="region"
+        for="image"
       >
-        Region:
+        Url:
       </label>
       <input
         class="formControl"
-        id="region"
-        name="region"
-        placeholder="Region"
-        required=""
-        type="number"
-        value=""
-      />
-    </div>
-    <div
-      class="container"
-    >
-      <label
-        class="label"
-        for="manager"
-      >
-        Manager:
-      </label>
-      <input
-        class="formControl"
-        id="manager"
-        name="manager"
-        placeholder="Manager"
-        required=""
-        type="number"
-        value=""
-      />
-    </div>
-    <div
-      class="container"
-    >
-      <label
-        class="label"
-        for="previous-manager"
-      >
-        Previous Manage:
-      </label>
-      <input
-        class="formControl"
-        id="previous-manager"
-        name="previousManager"
-        placeholder="Previous Manager"
-        required=""
-        type="number"
-        value=""
-      />
-    </div>
-    <div
-      class="container"
-    >
-      <label
-        class="label"
-        for="management-company"
-      >
-        Management Company:
-      </label>
-      <input
-        class="formControl"
-        id="management-company"
-        name="managementCompany"
-        placeholder="Management Company"
-        required=""
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      class="container"
-    >
-      <label
-        class="label"
-        for="plan-registered"
-      >
-        Plan Registered:
-      </label>
-      <input
-        class="formControl"
-        id="plan-registered"
-        name="planRegistered"
-        placeholder="Plan Registered"
-        required=""
-        type="date"
-        value=""
-      />
-    </div>
-    <div
-      class="container"
-    >
-      <label
-        class="label"
-        for="address"
-      >
-        Address:
-      </label>
-      <input
-        class="formControl"
-        id="address"
-        name="address"
-        placeholder="Address"
-        required=""
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      class="container"
-    >
-      <label
-        class="label"
-        for="account"
-      >
-        Account:
-      </label>
-      <input
-        class="formControl"
-        id="account"
-        name="account"
-        placeholder="Account"
-        required=""
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      class="container"
-    >
-      <label
-        class="label"
-        for="abn"
-      >
-        abn:
-      </label>
-      <input
-        class="formControl"
-        id="abn"
-        name="abn"
-        placeholder="abn"
+        id="image"
+        name="image"
+        placeholder="Url"
         required=""
         type="text"
         value=""
