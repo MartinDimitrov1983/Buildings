@@ -3,7 +3,7 @@ import styles from './index.module.css';
 import Input from '../input';
 import Button from '../button';
 
-const Form = ({ handleSubmit, buildings, setBuildings, title }) => {
+const Form = ({ handleSubmit, building, setBuilding, title }) => {
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
             <p className={styles.title}>{title}</p>
@@ -13,9 +13,9 @@ const Form = ({ handleSubmit, buildings, setBuildings, title }) => {
                 name="name"
                 placeHolder="Name"
                 label="Name"
-                value={buildings?.name}
+                value={building?.name}
                 onChange={(e) =>
-                    setBuildings({ ...buildings, name: e.target.value })
+                    setBuilding({ ...building, name: e.target.value })
                 }
             />
             <Input
@@ -24,9 +24,9 @@ const Form = ({ handleSubmit, buildings, setBuildings, title }) => {
                 name="area"
                 placeHolder="Area"
                 label="Area"
-                value={buildings?.area}
+                value={building?.area}
                 onChange={(e) =>
-                    setBuildings({ ...buildings, area: e.target.value })
+                    setBuilding({ ...building, area: e.target.value })
                 }
             />
             <Input
@@ -35,9 +35,9 @@ const Form = ({ handleSubmit, buildings, setBuildings, title }) => {
                 name="location"
                 placeHolder="Location"
                 label="Location"
-                value={buildings?.location}
+                value={building?.location}
                 onChange={(e) =>
-                    setBuildings({ ...buildings, location: e.target.value })
+                    setBuilding({ ...building, location: e.target.value })
                 }
             />
             <Input
@@ -46,9 +46,9 @@ const Form = ({ handleSubmit, buildings, setBuildings, title }) => {
                 name="image"
                 placeHolder="Url"
                 label="Url"
-                value={buildings?.image}
+                value={building?.image}
                 onChange={(e) =>
-                    setBuildings({ ...buildings, image: e.target.value })
+                    setBuilding({ ...building, image: e.target.value })
                 }
             />
             <Button className={styles.btn} type="submit">

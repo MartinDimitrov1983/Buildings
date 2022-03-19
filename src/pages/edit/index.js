@@ -8,12 +8,14 @@ const EditPage = () => {
     const history = useHistory();
     const { id } = useParams();
 
-    const [buildings, setBuildings] = useState();
+    const [building, setBuilding] = useState();
+    const [loading, setLoading] = useState(true);
 
     const getData = useCallback(async () => {
-        const propId = Number(id);
-        const prop = await getBuilding(propId);
-        setBuildings(prop);
+        const buildingId = Number(id);
+        const buildingData = await getBuilding(buildingId);
+        setBuilding(buildingData);
+        setLoading(false);
     }, [id]);
 
     useEffect(() => {
@@ -24,19 +26,27 @@ const EditPage = () => {
         event.preventDefault();
 
         const propId = Number(id);
-        const body = { ...buildings, id: propId };
-        await updateBuilding(body);
-        history.push(`/details`);
+        const body = { ...building, id: propId };
+        const res = await updateBuilding(body);
+        if (res === true) {
+            history.push(`/details`);
+        }
     };
+
+    if (loading) {
+        return <div>Loading....</div>;
+    }
 
     return (
         <PageLayout>
-            <Form
-                handleSubmit={handleSubmit}
-                buildings={buildings}
-                setBuildings={setBuildings}
-                title="Edit building"
-            />
+            {!loading && (
+                <Form
+                    handleSubmit={handleSubmit}
+                    building={building}
+                    setBuilding={setBuilding}
+                    title="Edit building"
+                />
+            )}
         </PageLayout>
     );
 };

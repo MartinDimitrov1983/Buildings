@@ -6,22 +6,24 @@ import PageLayout from '../../page-layout';
 import { createBuildng } from '../../services/services';
 
 const CratePage = () => {
-    const [buildings, setBuildings] = useState({});
+    const [building, setBuilding] = useState({});
     const history = useHistory();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(buildings)
-        await createBuildng(buildings);
-        history.push(`/details`);
+        const res = await createBuildng(building);
+        if (res === true) {
+            history.push(`/details`);
+        }
+       
     };
 
     return (
         <PageLayout>
             <Form
                 handleSubmit={handleSubmit}
-                buildings={buildings}
-                setBuildings={setBuildings}
+                building={building}
+                setBuilding={setBuilding}
                 title="Create building"
             />
         </PageLayout>
