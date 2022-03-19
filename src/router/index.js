@@ -1,43 +1,43 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import HomePage from '../pages/home'
-import DetailsPage from '../pages/details'
-import CreatePage from '../pages/create'
-import EditPage from '../pages/edit'
+import HomePage from '../pages/home';
+import DetailsPage from '../pages/details';
+import CreatePage from '../pages/create';
+import EditPage from '../pages/edit';
 const ROUTES = [
     {
         route: '/',
-        component: HomePage,
+        component: <HomePage />
     },
     {
         route: '/details',
-        component: DetailsPage,
+        component: <DetailsPage />
     },
     {
         route: '/create',
-        component: CreatePage,
+        component: <CreatePage />
     },
     {
         route: '/edit/:id',
-        component: EditPage,
-    },
-]
+        component: <EditPage />
+    }
+];
 const Navigation = () => {
     return (
         <BrowserRouter>
-            <Switch>
+            <Routes>
                 {ROUTES.map((route, index) => (
                     <Route
                         key={`key-${index}`}
                         path={route.route}
                         exact
-                        component={route.component}
+                        element={route.component}
                     />
                 ))}
-            </Switch>
+            </Routes>
         </BrowserRouter>
-    )
-}
+    );
+};
 
-export default Navigation
+export default Navigation;

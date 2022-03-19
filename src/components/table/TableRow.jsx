@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from '../button';
 import { EditIcon, DeleteIcon } from '../icons';
 import styles from './index.module.css';
@@ -11,12 +11,12 @@ const TableRow = ({
     onDelete,
     ...props
 }) => {
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const tableRowData = Object.entries(tableCells);
     const [[id, value]] = tableRowData;
     const onEdit = (value) => {
-        history.push(`/edit/${value}`);
+        navigate(`/edit/${value}`);
     };
 
     return (

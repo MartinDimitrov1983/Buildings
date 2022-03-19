@@ -5,12 +5,12 @@ import Button from '../../components/button';
 import CreateIcon from '../../components/icons/create';
 import PageLayout from '../../page-layout';
 import styles from './index.module.css';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { deleteBuilding } from '../../services/services';
 import { fetchData } from '../../utils/fetchData';
 
 const DetailsPage = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const [buildings, setBuildings] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -31,7 +31,7 @@ const DetailsPage = () => {
         <PageLayout>
             <Header />
             <div className={styles.home}>
-                <Button onClick={() => history.push('/create')}>
+                <Button onClick={() => navigate('/create')}>
                     <CreateIcon />
                 </Button>
             </div>

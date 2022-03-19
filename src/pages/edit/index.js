@@ -1,11 +1,11 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { useHistory, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Form from '../../components/form';
 import PageLayout from '../../page-layout';
 import { getBuilding, updateBuilding } from '../../services/services';
 
 const EditPage = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const { id } = useParams();
 
     const [building, setBuilding] = useState();
@@ -29,7 +29,7 @@ const EditPage = () => {
         const body = { ...building, id: propId };
         const res = await updateBuilding(body);
         if (res === true) {
-            history.push(`/details`);
+            navigate(`/details`);
         }
     };
 
