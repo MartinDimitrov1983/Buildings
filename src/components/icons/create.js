@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CreateIcon = (props) => {
+const CreateIcon = () => {
     return (
       
         <svg

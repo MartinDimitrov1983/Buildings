@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EditIcon = (props) => {
+const EditIcon = () => {
     return (
        
             <svg

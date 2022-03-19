@@ -14,26 +14,22 @@ const TableRow = ({
     const navigate = useNavigate();
 
     const tableRowData = Object.entries(tableCells);
-    const [[id, value]] = tableRowData;
+    const [[, value]] = tableRowData;
     const onEdit = (value) => {
         navigate(`/edit/${value}`);
     };
 
     return (
         <tr {...props}>
-            {tableRowData.map((value, index) => {
-                if (value[0] === 'image') {
+            {tableRowData.map(([id, value], index) => {
+                if (id === 'image') {
                     return (
                         <Tag className={styles.center} key={index}>
-                            <img
-                                className={styles.img}
-                                src={value[1]}
-                                alt="img"
-                            />
+                            <img className={styles.img} src={value} alt="img" />
                         </Tag>
                     );
                 }
-                return <Tag key={index}>{value[1]}</Tag>;
+                return <Tag key={index}>{value}</Tag>;
             })}
             {isBodyRow && (
                 <Tag className={styles.center}>
