@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { localStorageManagement } from '../utils/localStorage';
 
 const { getItem, setItem } = localStorageManagement();
@@ -36,10 +37,9 @@ export const getBuilding = (id) => {
 export const createBuildng = async (buildng) => {
     return new Promise((resolve, reject) => {
         const buildings = getItem('buildings');
-        const id = buildings.length + 1;
 
         const building = {
-            id: Number(id),
+            id: uuidv4(),
             name: buildng.name,
             area: buildng.area,
             location: buildng.location || '',
@@ -79,8 +79,10 @@ export const deleteBuilding = async (id) => {
 
 export const updateBuilding = async (buildng) => {
     return new Promise((resolve, reject) => {
-        const buildings = getItem('buildings');
-        const newBuildings = buildings.filter((prop) => prop.id !== buildng.id);
+        let buildings = getItem('buildings');
+        const buidingIndex = buildings.findIndex(
+            (prop) => prop.id === buildng.id
+        );
         const newBuiding = {
             id: Number(buildng.id),
             name: buildng.name,
@@ -96,7 +98,9 @@ export const updateBuilding = async (buildng) => {
             );
         }
 
-        setItem('buildings', [...newBuildings, newBuiding]);
+        buildings.splice(buidingIndex, 1, newBuiding);
+
+        setItem('buildings', buildings);
         setTimeout(() => resolve(true), 500);
     });
 };
