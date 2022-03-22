@@ -3,7 +3,6 @@ import TableRow from './TableRow.jsx';
 import styles from './index.module.css';
 import { HEADER_VALUES } from '../../utils/constants.js';
 
-
 const Table = ({ data, onDelete, ...props }) => {
     return (
         <div className={styles.container} {...props}>
