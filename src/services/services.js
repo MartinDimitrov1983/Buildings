@@ -42,19 +42,13 @@ export const createBuildng = async (buildng) => {
             id: Number(id),
             name: buildng.name,
             area: buildng.area,
-            location: buildng.location,
-            image: buildng.image
+            location: buildng.location || '',
+            image: buildng.image || ''
         };
 
         const newBuidings = [...buildings, building];
 
-        if (
-            !building.id ||
-            !building.name ||
-            !building.area ||
-            !building.location ||
-            !building.image
-        ) {
+        if (!building.id || !building.name || !building.area) {
             return setTimeout(
                 () => reject(new Error("Can't create buiding")),
                 500

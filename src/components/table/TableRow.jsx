@@ -19,6 +19,11 @@ const TableRow = ({
         navigate(`/edit/${value}`);
     };
 
+    if (tableRowData.length < 5) {
+        tableRowData.length = 5;
+    }
+
+
     return (
         <tr {...props}>
             {tableRowData.map(([id, value], index) => {

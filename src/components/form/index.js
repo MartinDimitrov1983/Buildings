@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './index.module.css';
 import Input from '../input';
 import Button from '../button';
+import { SAVE_TEXT } from '../../utils/constants';
 
 const Form = ({ handleSubmit, building, setBuilding, title }) => {
     return (
@@ -13,6 +14,7 @@ const Form = ({ handleSubmit, building, setBuilding, title }) => {
                 name="name"
                 placeHolder="Name"
                 label="Name"
+                minLength={3}
                 value={building?.name}
                 onChange={(e) =>
                     setBuilding({ ...building, name: e.target.value })
@@ -35,6 +37,7 @@ const Form = ({ handleSubmit, building, setBuilding, title }) => {
                 name="location"
                 placeHolder="Location"
                 label="Location"
+                required={false}
                 value={building?.location}
                 onChange={(e) =>
                     setBuilding({ ...building, location: e.target.value })
@@ -46,13 +49,14 @@ const Form = ({ handleSubmit, building, setBuilding, title }) => {
                 name="image"
                 placeHolder="Url"
                 label="Url"
+                required={false}
                 value={building?.image}
                 onChange={(e) =>
                     setBuilding({ ...building, image: e.target.value })
                 }
             />
             <Button className={styles.btn} type="submit">
-                Save
+                {SAVE_TEXT}
             </Button>
         </form>
     );

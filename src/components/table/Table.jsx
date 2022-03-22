@@ -24,7 +24,7 @@ const Table = ({ data, onDelete, ...props }) => {
                 <tbody>
                     {data?.map((rowData) => (
                         <TableRow
-                            key={rowData.id}
+                            key={`key-${rowData.id}-${rowData.name}`}
                             tableCells={rowData}
                             tag="td"
                             onDelete={onDelete}

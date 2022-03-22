@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import Form from '../../components/form';
 import PageLayout from '../../page-layout';
 import { createBuildng } from '../../services/services';
+import { CREATE_BUILDING_TEXT } from '../../utils/constants';
 
 const CratePage = () => {
     const [building, setBuilding] = useState({});
@@ -24,7 +25,7 @@ const CratePage = () => {
                 handleSubmit={handleSubmit}
                 building={building}
                 setBuilding={setBuilding}
-                title="Create building"
+                title={CREATE_BUILDING_TEXT}
             />
         </PageLayout>
     );

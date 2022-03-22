@@ -10,6 +10,7 @@ const Input = ({
     onChange,
     value,
     required = true,
+    ...props
 }) => {
     return (
         <div className={styles.container}>
@@ -22,10 +23,11 @@ const Input = ({
                 name={name}
                 className={styles.formControl}
                 placeholder={placeHolder}
-                value={value}
+                defaultValue={value}
                 autoFocus=""
                 required={required}
                 onChange={onChange}
+                {...props}
             />
         </div>
     )

@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Form from '../../components/form';
 import PageLayout from '../../page-layout';
 import { getBuilding, updateBuilding } from '../../services/services';
+import { EDIT_BUILDING_TEXT } from '../../utils/constants';
 
 const EditPage = () => {
     const navigate = useNavigate();
@@ -44,7 +45,7 @@ const EditPage = () => {
                     handleSubmit={handleSubmit}
                     building={building}
                     setBuilding={setBuilding}
-                    title="Edit building"
+                    title={EDIT_BUILDING_TEXT}
                 />
             )}
         </PageLayout>

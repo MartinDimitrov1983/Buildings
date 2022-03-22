@@ -20,6 +20,7 @@ exports[`Snapshot Form 1`] = `
       <input
         class="formControl"
         id="name"
+        minlength="3"
         name="name"
         placeholder="Name"
         required=""
@@ -60,7 +61,6 @@ exports[`Snapshot Form 1`] = `
         id="location"
         name="location"
         placeholder="Location"
-        required=""
         type="text"
         value=""
       />
@@ -79,7 +79,6 @@ exports[`Snapshot Form 1`] = `
         id="image"
         name="image"
         placeholder="Url"
-        required=""
         type="text"
         value=""
       />
