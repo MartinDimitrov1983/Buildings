@@ -9,7 +9,7 @@ export const getBuildings = () => {
 
         if (!buildings) {
             return setTimeout(
-                () => reject(new Error('Buidings not found')),
+                () => reject(new Error('Buildings not found')),
                 500
             );
         }
@@ -25,7 +25,7 @@ export const getBuilding = (id) => {
 
         if (!building) {
             return setTimeout(
-                () => reject(new Error('Buiding not found')),
+                () => reject(new Error('Building not found')),
                 500
             );
         }
@@ -46,16 +46,16 @@ export const createBuildng = async (buildng) => {
             image: buildng.image || ''
         };
 
-        const newBuidings = [...buildings, building];
+        const newBuildings = [...buildings, building];
 
         if (!building.id || !building.name || !building.area) {
             return setTimeout(
-                () => reject(new Error("Can't create buiding")),
+                () => reject(new Error("Can't create building")),
                 500
             );
         }
 
-        setItem('buildings', newBuidings);
+        setItem('buildings', newBuildings);
         setTimeout(() => resolve(true), 500);
     });
 };
@@ -63,27 +63,27 @@ export const createBuildng = async (buildng) => {
 export const deleteBuilding = async (id) => {
     return new Promise((resolve, reject) => {
         const buildings = getItem('buildings');
-        const newBuidings = buildings.filter((buildng) => buildng.id !== id);
+        const newBuildings = buildings.filter((buildng) => buildng.id !== id);
 
         if (!id) {
             return setTimeout(
-                () => reject(new Error('Buiding not found')),
+                () => reject(new Error('Building not found')),
                 500
             );
         }
 
-        setItem('buildings', newBuidings);
-        setTimeout(() => resolve(newBuidings), 500);
+        setItem('buildings', newBuildings);
+        setTimeout(() => resolve(newBuildings), 500);
     });
 };
 
 export const updateBuilding = async (buildng) => {
     return new Promise((resolve, reject) => {
         let buildings = getItem('buildings');
-        const buidingIndex = buildings.findIndex(
+        const buildingIndex = buildings.findIndex(
             (prop) => prop.id === buildng.id
         );
-        const newBuiding = {
+        const newBuilding = {
             id: Number(buildng.id),
             name: buildng.name,
             area: buildng.area,
@@ -91,14 +91,14 @@ export const updateBuilding = async (buildng) => {
             image: buildng.image
         };
 
-        if (!newBuiding.id) {
+        if (!newBuilding.id) {
             return setTimeout(
-                () => reject(new Error('Buiding not found')),
+                () => reject(new Error('Building not found')),
                 500
             );
         }
 
-        buildings.splice(buidingIndex, 1, newBuiding);
+        buildings.splice(buildingIndex, 1, newBuilding);
 
         setItem('buildings', buildings);
         setTimeout(() => resolve(true), 500);
