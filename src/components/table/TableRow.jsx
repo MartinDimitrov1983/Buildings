@@ -23,7 +23,6 @@ const TableRow = ({
         tableRowData.length = 5;
     }
 
-
     return (
         <tr {...props}>
             {tableRowData.map(([id, value], index) => {

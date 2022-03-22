@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './index.module.css'
+import React from 'react';
+import styles from './index.module.css';
 
 const Input = ({
     type,
@@ -30,7 +30,7 @@ const Input = ({
                 {...props}
             />
         </div>
-    )
-}
+    );
+};
 
-export default Input
+export default Input;

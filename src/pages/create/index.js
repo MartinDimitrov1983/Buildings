@@ -16,7 +16,6 @@ const CratePage = () => {
         if (res === true) {
             navigate(`/details`);
         }
-       
     };
 
     return (

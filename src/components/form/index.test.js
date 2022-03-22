@@ -1,9 +1,9 @@
-import React from 'react'
-import { render } from '@testing-library/react'
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import Form from './index'
+import Form from './index';
 
 test('Snapshot Form', () => {
-    const { asFragment } = render(<Form />)
-    expect(asFragment()).toMatchSnapshot()
-})
+    const { asFragment } = render(<Form />);
+    expect(asFragment()).toMatchSnapshot();
+});

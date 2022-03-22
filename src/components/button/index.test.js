@@ -1,9 +1,9 @@
-import React from 'react'
-import { render } from '@testing-library/react'
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import Button from './index'
+import Button from './index';
 
 test('Snapshot Button', () => {
-    const { asFragment } = render(<Button />)
-    expect(asFragment()).toMatchSnapshot()
-})
+    const { asFragment } = render(<Button />);
+    expect(asFragment()).toMatchSnapshot();
+});

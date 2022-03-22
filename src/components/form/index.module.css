@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-.btn{
+.btn {
     width: 100px;
     margin: 50px auto;
     background-color: rgba(51, 51, 51, 0.842);
@@ -10,11 +10,11 @@
     display: block;
 }
 
-.form{
+.form {
     padding: 2%;
     width: 80%;
     margin: 0 auto;
     margin-top: 2%;
     border: solid;
     border-radius: 1rem;
-  }
+}
