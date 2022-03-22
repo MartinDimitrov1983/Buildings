@@ -1,15 +1,9 @@
 import React from 'react';
 import TableRow from './TableRow.jsx';
 import styles from './index.module.css';
+import { HEADER_VALUES } from '../../utils/constants.js';
 
-const HEADER_VALUES = {
-    id: 'Id',
-    name: 'Name',
-    area: 'Area',
-    location: 'Location',
-    Image: 'Image',
-    Action: 'Action'
-};
+
 const Table = ({ data, onDelete, ...props }) => {
     return (
         <div className={styles.container} {...props}>

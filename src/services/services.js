@@ -39,7 +39,7 @@ export const createBuildng = async (buildng) => {
         const buildings = getItem('buildings');
 
         const building = {
-            id: uuidv4(),
+            id: uuidv4().slice(0,4),
             name: buildng.name,
             area: buildng.area,
             location: buildng.location || '',
